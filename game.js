@@ -1,14 +1,19 @@
 let clowns = {
   name: 'Slappy the Clown',
   health: 100,
-  hits: 0
+  hits: 0,
+  items: [
+    { name: 'Laugh', modifier: -2, description: 'CREEPY!' },
+    { name: 'Ballon', modifier: -3, description: 'IT\'S A SHIELD!' },
+    { name: 'Banana Peel', modifier: -4, description: 'SLIPPERY!' }
+  ]
 }
 
-let items = {
-  fire: { name: 'Fire', modifier: 2, description: 'ITBURNS!' }
-  bat: { name: 'Bat', modifier: 4, description: 'WHACK!' }
-  punchGun: { name: 'Punch Gun', modifier: 5, description: 'POW!' }
-}
+// let items = [{
+//   laugh: { name: 'Laugh', modifier: -2, description: 'CREEPY!' }
+//   balloon: { name: 'Ballon', modifier: -3, description: 'IT\'S A SHIELD!' }
+//   bananaPeel: { name: 'Banana Peel', modifier: -4, description: 'SLIPPERY!' }
+// }]
 
 function slap() {
   clowns.health--

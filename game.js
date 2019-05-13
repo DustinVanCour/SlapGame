@@ -1,32 +1,34 @@
-let name = 'Slappy the Clown'
-let health = 100
-let hits = 0
+let clowns = {
+  name: 'Slappy the Clown',
+  health: 100,
+  hits: 0
+}
 
 function slap() {
-  health--
-  hits++
+  clowns.health--
+  clowns.hits++
   console.log(health)
   update()
 }
 
 function punch() {
-  health -= 5
-  hits++
+  clowns.health -= 5
+  clowns.hits++
   console.log(health)
   update()
 }
 
 function kick() {
-  health -= 10
-  hits++
+  clowns.health -= 10
+  clowns.hits++
   console.log(health)
   update()
 }
 
 function update() {
-  document.getElementById("health").innerText = health;
-  document.getElementById("hit-counter").innerText = hits;
-  document.getElementById("name").innerText = name;
+  document.getElementById("health").innerText = clowns.health;
+  document.getElementById("hit-counter").innerText = clowns.hits;
+  document.getElementById("name").innerText = clowns.name;
 }
 
 

@@ -22,7 +22,7 @@
   <div class="section" id="slappy">
     <div class="container-fluid">
       <div class="row">
-        <div class="col d-flex" id="slappy-img"><img src="/assets/slappy.jpg" alt="Slappy Clown"></div>
+        <div class="col d-flex" id="slappy-img"><img src="assets/slappy.jpg" alt="Slappy Clown"></div>
         <div class="col" id="slappy-stats">
           <div class="row">
             <div class="col">
@@ -37,6 +37,24 @@
           <div class="row">
             <div class="col">
               <h2>Hits: <span id="hit-counter"></span></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="btn btn-danger modifier" onClick="giveLaugh()" id="laugh"><i class="fas fa-laugh-beam"></i>
+                LAUGH</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="btn btn-primary modifier" onClick="giveBalloonShield()" id="balloon"><i
+                  class="fas fa-shield-alt"></i> BALLOON SHIELD</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="btn btn-success modifier" onClick="giveBananaPeel()" id="banana"><i
+                  class="fas fa-user-injured"></i> BANANA PEEL</div>
             </div>
           </div>
         </div>

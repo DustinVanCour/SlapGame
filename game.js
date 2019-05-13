@@ -2,38 +2,58 @@ let clowns = {
   name: 'Slappy the Clown',
   health: 100,
   hits: 0,
-  items: [
-    { name: 'Laugh', modifier: -2, description: 'CREEPY!' },
-    { name: 'Ballon', modifier: -3, description: 'IT\'S A SHIELD!' },
-    { name: 'Banana Peel', modifier: -4, description: 'SLIPPERY!' }
-  ]
+  items: []
 }
 
-// let items = [{
-//   laugh: { name: 'Laugh', modifier: -2, description: 'CREEPY!' }
-//   balloon: { name: 'Ballon', modifier: -3, description: 'IT\'S A SHIELD!' }
-//   bananaPeel: { name: 'Banana Peel', modifier: -4, description: 'SLIPPERY!' }
-// }]
+let items = {
+  laugh: { name: 'Laugh', modifier: 2, description: 'IT\'S THE BEST MEDICINE!' },
+  balloonShield: { name: 'Ballon Shield', modifier: -2, description: 'IT\'S A SHIELD!' },
+  bananaPeel: { name: 'Banana Peel', modifier: -3, description: 'SLIPPERY!' }
+}
 
 function slap() {
-  clowns.health--
+  clowns.health -= 1 + addMods()
   clowns.hits++
   console.log(health)
   update()
 }
 
 function punch() {
-  clowns.health -= 5
+  clowns.health -= 5 + addMods();
   clowns.hits++
   console.log(health)
   update()
 }
 
 function kick() {
-  clowns.health -= 10
+  clowns.health -= 10 + addMods()
   clowns.hits++
   console.log(health)
   update()
+}
+
+function giveLaugh() {
+  clowns.items.push(items.laugh)
+  console.log(clowns.items[0])
+}
+
+function giveBalloonShield() {
+  clowns.items.push(items.balloonShield)
+  console.log(clowns.items[1])
+}
+
+function giveBananaPeel() {
+  clowns.items.push(items.bananaPeel)
+  console.log(clowns.items[2])
+}
+
+function addMods() {
+  let total = 0
+  for (let i = 0; i < clowns.items.length; i++) {
+    let item = clowns.items[i]
+    total += item.modifier
+  }
+  return total
 }
 
 function update() {

@@ -4,6 +4,12 @@ let clowns = {
   hits: 0
 }
 
+let items = {
+  fire: { name: 'Fire', modifier: 2, description: 'ITBURNS!' }
+  bat: { name: 'Bat', modifier: 4, description: 'WHACK!' }
+  punchGun: { name: 'Punch Gun', modifier: 5, description: 'POW!' }
+}
+
 function slap() {
   clowns.health--
   clowns.hits++

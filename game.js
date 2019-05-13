@@ -5,4 +5,6 @@ function slap() {
   console.log(health)
 }
 
-
+function update() {
+  document.getElementById("health").innerText
+}
